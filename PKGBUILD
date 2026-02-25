@@ -1,20 +1,22 @@
+# Maintainer: LittleYe233 <littleye233@gmail.com>
 # Maintainer: hellopoisonx <x1665341912@gmail.com>
 # Contributor: Atom Long <atom.long@hotmail.com>
 
 pkgname=libcron
-pkgver=1.3.1
+pkgver=1.3.3
 pkgrel=1
 pkgdesc='A C++ scheduling library using cron formatting.'
 url='https://github.com/PerMalmberg/libcron'
 arch=('x86_64' 'i686' 'arm' 'armv6h' 'armv7h' 'aarch64')
 license=('MIT')
 conflicts=("${pkgname}-git")
-_date_ver=3.0.3
+_date_ver=3.0.4
 source=("${pkgname}-${pkgver}.tar.gz::${url}/archive/refs/tags/v${pkgver}.tar.gz"
         "date-${_date_ver}.tar.gz::https://github.com/HowardHinnant/date/archive/refs/tags/v${_date_ver}.tar.gz")
-sha256sums=('cf5af6af392df29c8fc61fcc5a8e452118f31f47d7aa92eb7d4f4183dea227c8'
-            '30de45a34a2605cca33a993a9ea54e8f140f23b1caf1acf3c2fd436c42c7d942')
+sha256sums=('7d413b7950c82b54157b2a7f446e1e660bd718e542e2ffd3f8715e467ab2b825'
+            '56e05531ee8994124eeb498d0e6a5e1c3b9d4fccbecdf555fe266631368fb55f')
 makedepends=('cmake')
+options=('!strip')
 
 prepare() {
   cd ${pkgname}-${pkgver}
